@@ -1,0 +1,126 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HomePage.master.cs" Inherits="CapaPresentacion.HomePage" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Sistema Bingo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Assets/Plugins/bootstrap.4.5.2/bootstrap.min.css" rel="stylesheet" />
+    <link href="Assets/Plugins/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet" />
+    <link href="Assets/Plugins/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- <link href="Assets/Plugins/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" /> -->
+    <%--<link href="css/stylebingo.css" rel="stylesheet">--%>
+
+    <style>
+        i::before {
+            margin-right: 5px;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
+        <a style="color: #E1742D;" class="navbar-brand" href="Inicio.aspx">Juego de Bingo</a>
+        <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse"
+            data-target="#navb" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navb">
+            <ul id="menu" class="navbar-nav mr-auto">
+
+                <!-- Menú simple sin submenús -->
+                <li class="nav-item">
+                    <a href="Inicio.aspx" class="nav-link">
+                        <i class="fas fa-home" aria-hidden="true"></i> Inicio
+                    </a>
+                </li>
+
+                <!-- Menú Gestión -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        <i class="fas fa-cogs" aria-hidden="true"></i> Tutorial
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">
+                            <i class="fa fa-caret-right" aria-hidden="true"></i> Jugadas
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fa fa-caret-right" aria-hidden="true"></i> Como Jugar
+                        </a>
+                    </div>
+                </li>
+
+                <!-- Inicio de jugadas -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        <i class="fas fa-cogs" aria-hidden="true"></i> Iniciar Jugada
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="legendario.html" class="dropdown-item">
+                            <i class="fa fa-caret-right" aria-hidden="true"></i> Legendario
+                        </a>
+                        <a href="bingito.html" class="dropdown-item">
+                            <i class="fa fa-caret-right" aria-hidden="true"></i> Bingito
+                        </a>
+                    </div>
+                </li>
+
+                <!-- Menú Reportes -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        <i class="fas fa-chart-bar" aria-hidden="true"></i> Crear Jugadas
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="PageFiguras.aspx" class="dropdown-item">
+                            <i class="fa fa-caret-right" aria-hidden="true"></i> Crear
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fa fa-caret-right" aria-hidden="true"></i> Lista
+                        </a>
+                        <!-- FrmCompras no aparece porque Activo = false -->
+                    </div>
+                </li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right" style="color:#fff">
+                <li class="mr-4">
+                    <label id="nombreusuario">
+                        <i class="bi bi-person-fill mr-1">Zero_Byte</i>
+                    </label>
+                </li>
+                <li class="mr-4">
+                    <label id="rolusuario">
+                        <i class="bi bi-shield-fill-check mr-1">Administrador</i>
+                    </label>
+                </li>
+                <li class="mr-2">
+                    <a href="#"><i class="bi bi-x"></i>Salir</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <asp:ContentPlaceHolder ID="body" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+
+
+    <script src="Assets/Plugins/jquery/jquery.3.5.1.min.js"></script>
+    <script src="Assets/Plugins/bootstrap.4.5.2/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="Assets/Plugins/fontawesome-free-5.15.1-web/js/all.js"></script>
+    <script src="Assets/Plugins/loadingoverlay/loadingoverlay.js"></script>
+    
+    <asp:ContentPlaceHolder ID="footer" runat="server"></asp:ContentPlaceHolder>
+</body>
+
+</html>
